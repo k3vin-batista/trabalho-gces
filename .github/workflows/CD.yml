@@ -20,9 +20,8 @@ jobs:
       - name: Setup poetry
         uses: Gr1N/setup-poetry@v8
 
-      - run: |
-          poetry config pypi-token.pypi pypi-AgEIcHlwaS5vcmcCJGYyZjdjYjlhLTI4MzctNDY0Zi04MzVjLTU5MmYxMzFkY2U0NgACKlszLCIyNTcxYjQzMy04ZDI2LTQ5YmUtYTIzZS03M2FiMDA4ZDdjZWYiXQAABiCPo1gYrocJ_KHYyXqzhTjqoAVFrxrZLLsn4ka9w7YnWw
-          poetry build
-          poetry publish
+      - run: poetry config pypi-token.pypi ${{ PYPI_TOKEN }}
+      - run: poetry build
+      - run: poetry publish
           
           
