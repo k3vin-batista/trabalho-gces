@@ -55,3 +55,11 @@ jobs:
       - name: Linting the code with pylint
         run: |
           pylint $(git ls-files '*.py')
+
+  documentation:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ammaraskar/sphinx-action@master
+      with:
+        docs-folder: "docs/"
