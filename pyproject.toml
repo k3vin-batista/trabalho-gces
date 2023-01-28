@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ti-teste3"
+name = "GCES-Kevin-180042386"
 version = "0.2.0"
 description = ""
 authors = ["Kevin Luis  <k.luis360@gmail.com>"]
@@ -60,7 +60,3 @@ zipp = "3.11.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[pypi]
-  username = ["__token__"]
-  password = ["pypi-AgEIcHlwaS5vcmcCJDU0YzFjYTRiLTM1NTgtNGU2MS1iMjVhLTlkZDg5NjNmMGZhZgACKlszLCIyNTcxYjQzMy04ZDI2LTQ5YmUtYTIzZS03M2FiMDA4ZDdjZWYiXQAABiDYUCnxeLw7PWQ6ktKxtckBLjbIQSAdbbe-ZZKz_pQ1JA"]
