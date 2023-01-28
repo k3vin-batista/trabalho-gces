@@ -27,6 +27,9 @@ services:
         depends_on:
             - mongodb
 
+    aplicacao:
+        build: .
+        
 networks:
     stack:
         driver: bridge
