@@ -1,4 +1,4 @@
-name: Build and publish pyhton package
+name: Build and publish python package
 
 on:
   release:
@@ -15,9 +15,18 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.8.10"
+      - name: Setup enviroment
+        run: pip install -r requirements.txt
+        
       - name: Setup poetry
         uses: Gr1N/setup-poetry@v8
 
       - run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+      - run: poetry install
+      
+      - name: Test aplication with poetry
+      - run: poetry run pytest tests/
+
       - run: poetry build
+      - name: Publish package
       - run: poetry publish
