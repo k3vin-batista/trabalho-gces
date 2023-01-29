@@ -23,10 +23,6 @@ jobs:
 
       - run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
       - run: poetry install
-      
-      - name: Test aplication with poetry
       - run: poetry run pytest tests/
-
       - run: poetry build
-      - name: Publish package
       - run: poetry publish
