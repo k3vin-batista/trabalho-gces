@@ -7,6 +7,13 @@ on:
     branches: [main]
 
 jobs:
+  build-ambient-docker:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker-compose up --build -d
+      
   build-poetry:
     runs-on: ubuntu-20.04
     steps:
