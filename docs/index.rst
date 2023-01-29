@@ -10,7 +10,7 @@ Welcome to Documentacao automatica - GCES's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules
 
 Indices and tables
 ==================
