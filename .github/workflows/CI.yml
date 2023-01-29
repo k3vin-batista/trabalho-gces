@@ -46,7 +46,23 @@ jobs:
       - name: Test
         run: |
           pytest tests/
-
+  
+  run-lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+      - name: Linting the code with pylint
+        run: |
+          pylint $(git ls-files '*.py')
+          
   documentation:
     runs-on: ubuntu-20.04
     steps:
