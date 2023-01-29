@@ -10,8 +10,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
       
+      - name: Setup python
         uses: actions/setup-python@v2
-        
+
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme
